@@ -1,7 +1,7 @@
 module ImcHelper
 
   def calculate(data)
-    imc = data[:peso] / data[:altura]**2 
+    imc = data[:weight] / data[:height]**2 
     data = {
       imc: imc.round(2)
     } 

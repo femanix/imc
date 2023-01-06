@@ -58,5 +58,13 @@ POST /imc
   "weight": 75
 }
 ```
+Retorno:
+```
+Response /imc - 200 OK
 
-
+{
+  "imc": 26.3,
+  "classification": "Sobrepeso",
+  "obesity": "I" 
+}
+```

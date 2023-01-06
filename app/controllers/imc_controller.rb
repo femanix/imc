@@ -13,7 +13,7 @@ class ImcController < ApplicationController
   private
 
   def imc_params
-    params.require(:imc).permit(:altura, :peso)
+    params.require(:imc).permit(:height, :weight)
   end
 
   def authenticate
