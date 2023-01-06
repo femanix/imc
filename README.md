@@ -26,7 +26,7 @@ A aplicação está pronta para uso:
 ```
 rails s
 ```
-## 🐱‍🏍 Recursos <imc_api>
+## 🔐 Token <imc_api>
 
 Gere o Token de Autenticação:
 ```
@@ -40,6 +40,8 @@ Gere o Token de Autenticação:
 {
   "token": "eyJhbGciOiJIUzI1NiJ9"
 }
+
+# O token é gerado utilizando a biblioteca JWT.
 ```
 
 O token deverá ser enviado nos headers da requisição:
@@ -49,6 +51,7 @@ headers{
   "Authorization": "eyJhbGciOiJIUzI1NiJ9""
 }
 ```
+## 📊 IMC  <imc_api>
 Para cálcular o IMC:
 ```
 POST /imc
@@ -71,9 +74,4 @@ Response /imc - 200 OK
 Testes:
 ```
 $ bundle exec rspec
-```
-
-Token:
-```
-O token é gerado utilizando a biblioteca JWT.
 ```
