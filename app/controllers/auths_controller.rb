@@ -11,8 +11,8 @@ class AuthsController < ApplicationController
   def set_payload
     params.require(:auth).permit(:username)
     {
-      username: params[:username],
-      exp: 10.minutes.from_now.to_i
+       username: params[:username],
+       exp: 10.minutes.from_now.to_i
     }
   end
 end
