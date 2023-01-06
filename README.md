@@ -3,8 +3,8 @@
 The setups steps expect following tools installed on the system.
 
 - Github
-- Ruby [2.4.0](https://github.com/organization/project-name/blob/master/.ruby-version#L1)
-- Rails [5.0.2](https://github.com/organization/project-name/blob/master/Gemfile#L12)
+- Ruby [x.x.x](https://github.com/organization/project-name/blob/master/.ruby-version#L1)
+- Rails [x.x.x](https://github.com/organization/project-name/blob/master/Gemfile#L12)
 
 ##### 1. Check out the repository
 
