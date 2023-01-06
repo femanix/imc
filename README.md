@@ -68,3 +68,12 @@ Response /imc - 200 OK
   "obesity": "I" 
 }
 ```
+Testes:
+```
+$ bundle exec rspec
+```
+
+Token:
+```
+O token é gerado utilizando a biblioteca JWT.
+```
