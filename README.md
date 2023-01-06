@@ -1,40 +1,62 @@
-##### Prerequisites
+# Cálculadora de IMC [API] - Ruby on Rails
 
-The setups steps expect following tools installed on the system.
+> Aplicação desenvolvida durante o Desafio Back-end Ruby On Rails, uma API que permite o cálculo do IMC do paciente.
 
-- Github
-- Ruby [x.x.x](https://github.com/organization/project-name/blob/master/.ruby-version#L1)
-- Rails [x.x.x](https://github.com/organization/project-name/blob/master/Gemfile#L12)
+## 💻 Pré-requisitos
 
-##### 1. Check out the repository
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+* Você instalou a versão  ` Ruby '3.1.2' | Rails '7.0.4'`.  
 
-```bash
-git clone git@github.com:organization/project-name.git
+## 🚀 Instalando <imc_api>
+
+Para instalar o <imc_api>, siga estas etapas:
+
+Clone este repositório:
+```
+git clone git@github.com:femanix/imc.git
 ```
 
-##### 2. Create database.yml file
-
-Copy the sample database.yml file and edit the database configuration as required.
-
-```bash
-cp config/database.yml.sample config/database.yml
+Instale as Gems:
+```
+bundle install
 ```
 
-##### 3. Create and setup the database
+A aplicação está pronta para uso:
+```
+rails s
+```
+## 🐱‍🏍 Recursos <imc_api>
 
-Run the following commands to create and setup the database.
+Gere o Token de Autenticação:
+```
+"POST /auth"
 
-```ruby
-bundle exec rake db:create
-bundle exec rake db:setup
+{
+  'username': "SEU_NOME_DE_USUÁRIO"
+}
+
+# Você receberá seu token no seguinte formato:
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9"
+}
 ```
 
-##### 4. Start the Rails server
+O token deverá ser enviado nos headers da requisição:
+```
+headers{
+  "Content-Type":"application/json",
+  "Authorization": "eyJhbGciOiJIUzI1NiJ9""
+}
+```
+Para cálcular o IMC:
+```
+POST /imc
 
-You can start the rails server using the command given below.
-
-```ruby
-bundle exec rails s
+{
+  "height": 1.70,
+  "weight": 75
+}
 ```
 
-And now you can visit the site with the URL http://localhost:3000
+
