@@ -1,5 +1,5 @@
 module ImcHelper
-
+  #Realiza o cálculo do IMC e retorna um json com a classificação
   def calculate(data)
     imc = data[:weight] / data[:height]**2 
     data = {
@@ -7,7 +7,8 @@ module ImcHelper
     } 
     data.merge(classification(imc))
   end
-    
+  
+  #Define a classificação de peso 
   def classification(imc)
     case imc
     when 0..18.5

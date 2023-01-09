@@ -5,7 +5,7 @@
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+
 * Você instalou a versão  ` Ruby '3.1.2' | Rails '7.0.4'`.  
 
 ## 🚀 Instalando <imc_api>
@@ -41,14 +41,14 @@ Gere o Token de Autenticação:
   "token": "eyJhbGciOiJIUzI1NiJ9"
 }
 
-# O token é gerado utilizando a biblioteca JWT.
+# O token é gerado utilizando a biblioteca JWT e tem o prazo de 10 minutos antes que expire.
 ```
 
 O token deverá ser enviado nos headers da requisição:
 ```
 headers{
   "Content-Type":"application/json",
-  "Authorization": "eyJhbGciOiJIUzI1NiJ9""
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9""
 }
 ```
 ## 📊 IMC  <imc_api>
